@@ -28,11 +28,11 @@ docker-compose -f nginx.docker-compose.yml up -d --force
 ### apache2
 Сборка
 ```
-docker-compose -f apache.docker-compose.yml build
+docker-compose -f apache2.docker-compose.yml build
 ```
 Запуск
 ```
-docker-compose -f apache.docker-compose.yml up -d --force
+docker-compose -f apache2.docker-compose.yml up -d --force
 ```
 О том, как все это работает, я расскажу на уроке
 
