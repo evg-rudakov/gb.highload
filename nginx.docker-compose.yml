@@ -21,3 +21,6 @@ services:
             dockerfile: docker/apache2/DockerFile
         volumes:
             - ./:/var/www
+        environment:
+            XDEBUG_CONFIG: remote_host=host.docker.internal
+            PHP_IDE_CONFIG: serverName=localhost
