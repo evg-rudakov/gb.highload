@@ -24,6 +24,18 @@ services:
         environment:
             XDEBUG_CONFIG: remote_host=host.docker.internal
             PHP_IDE_CONFIG: serverName=localhost
+    redis:
+        container_name: db-redis
+        build:
+            context: .
+            dockerfile: docker/redis/Dockerfile
+        sysctls:
+            - net.core.somaxconn=1000
+        ports:
+            - 6379:6379
+#        volumes:
+#            - ./docker/redis/data:/var/lib/redis
+
     percona:
         container_name: percona
         image: percona
